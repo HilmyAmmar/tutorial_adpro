@@ -10,5 +10,5 @@ public interface ProductService {
     public Product update(Product updatedProduct, String productId);
 
     public Product findById(String productId);
-
+    public void delete(String productId);
 }
