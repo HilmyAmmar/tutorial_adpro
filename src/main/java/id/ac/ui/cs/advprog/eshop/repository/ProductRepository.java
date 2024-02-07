@@ -23,8 +23,10 @@ public class ProductRepository {
 
     public void update(Product updatedProduct, String productID) {
         Product productData = findById(productID);
-        productData.setProductName(updatedProduct.getProductName());
-        productData.setProductQuantity(updatedProduct.getProductQuantity());
+        if (productData != null) {
+            productData.setProductName(updatedProduct.getProductName());
+            productData.setProductQuantity(updatedProduct.getProductQuantity());
+        }
     }
 
     public Product findById(String productId) {
