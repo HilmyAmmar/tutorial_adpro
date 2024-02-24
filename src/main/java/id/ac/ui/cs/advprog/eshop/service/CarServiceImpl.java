@@ -8,7 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 
 @Service
-public class CarServiceImpl implements CarService{
+public class CarServiceImpl implements CarCreateService, CarReadService, CarUpdateService, CarDeleteService{
     @Autowired
     private CarRepository carRepository;
     @Override
