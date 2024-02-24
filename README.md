@@ -16,8 +16,12 @@ Note #1: Terdapat satu prinsip lagi yang belum saya sebutkan dan tidak saya impl
 ## Explain the advantages of applying SOLID principles to your project with examples.
 1. Meningkatkan kualitas kode
 Pada pengimplementasian SRP, setiap class hanya memliki satu tanggung jawab. Ini akan membuat source code menjadi lebih terstruktur dan mudah untuk dipahami oleh developer lain. Sebagai contoh, kelas CarRepository bertanggung jawab dalam menangani operasi CRUD yang berkaitan dengan Car.
-2. Memudahkan maintanance software
+2. Memudahkan maintenance software
 Pada pengimplementasian OCP, setiap class/method/function harus bisa dikembangkan tanpa memodifikasi kode awal. Ini akan mengurangi terjadinya munculnya bug baru karena mengubah kode yang telah ada sebelumnya. Sebagai contoh, ketika sedang mengembangkan fitur baru, developer hanya perlu fokus pada fitur yang akan dibuatnya mengingat kode yang telah ada tidak akan dimodifikasi lagi.
 
-##
+## Explain the disadvantages of not applying SOLID principles to your project with examples
+1. Meningkatkan kemungkinan munculnya bug baru
+Ketika tidak mengimplementasikan SOLID, seluruh kode akan tergabung menjadi satu tanpa dipisah berdasarkan fungsionalitas masing-masing class/function. Perubahan yang dilakukan oleh developer pada satu bagian kode dapat berdampak pada bagian kode lainnya. Ini menyebabkan munculnya bug yang mungkin lebih susah untuk diperbaiki
+2. Menyulitkan maintenance software
+Tanpa pengimplementasian SOLID, developer akan mengalami kesulitan dalam mengembangkan ataupun menambahkan suatu fitur mengingat perubahan yang terjadi pada satu fitur bisa berpengaruh ke fitur lainnya yang menyebabkan munculnya bug-bug yang tidak diharapkan. Hal ini akan memperlama dan mempersulit proses maintenance. Bahkan, mungkin ada biaya tambahan yang diperlukan untuk memperbaiki softwarenya kembali seperti semula.
 
