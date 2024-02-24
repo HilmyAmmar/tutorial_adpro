@@ -7,10 +7,17 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+// implemented ISP
 @Service
-public class CarServiceImpl implements CarService{
+public class CarServiceImpl implements CarCreateService, CarReadService, CarUpdateService, CarDeleteService{
+
+    private final CarRepository carRepository;
+
+    // implemented DIP
     @Autowired
-    private CarRepository carRepository;
+    public CarServiceImpl(CarRepository carRepository) {
+        this.carRepository = carRepository;
+    }
     @Override
     public Car create(Car car) {
         carRepository.create(car);
